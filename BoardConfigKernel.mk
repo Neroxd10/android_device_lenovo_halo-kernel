@@ -40,3 +40,6 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := \
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
     $(wildcard $(KERNEL_PATH)/modules/*.ko)
+
+# Hack to fix build
+$(shell mkdir -p $(shell pwd)/out/target/product/halo/obj/KERNEL_OBJ/usr)
